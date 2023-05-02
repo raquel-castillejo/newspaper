@@ -1,1 +1,226 @@
-/* You can add global styles to this file, and also import other style files */
+/* BASE EDIT */
+/* ========= */
+
+:root {
+  /* COLORS */
+  --color-warm-gray-01: #f5f4ef;
+  --color-warm-gray-02: #e5e2d9;
+  --color-warm-gray-03: #535350;
+  --color-toner-gray: #b8b5b0;
+  --color-pale-cherry-pink: #f1dbce;
+
+  /* COLORS APPLIED */
+  --txt-color: var(--color-warm-gray-03);
+  --body-bg-color: var(--color-warm-gray-01);
+  --link-color: var(--color-toner-gray);
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 18px;
+  margin: 0;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  justify-content: center;
+}
+
+/* main content here */
+.mat-drawer-content {
+  background-color: var(--body-bg-color);
+}
+
+.main {
+  max-width: 43rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.3;
+
+  color: var(--txt-color);
+}
+
+/* ANGULAR NAVBAR EDIT */
+/* =================== */
+
+.mat-toolbar.mat-primary {
+  background-color: var(--body-bg-color);
+  color: var(--color-warm-gray-03);
+  border-bottom: 1px solid var(--color-warm-gray-03);
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* menu title */
+
+.mat-toolbar h2 {
+  font-family: "Cormorant Upright", serif;
+  border-bottom: 2px solid gray;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* nav menu list items */
+.mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
+  color: var(--color-warm-gray-03);
+  font-family: "Cormorant Upright", serif;
+  font-size: 1.1rem;
+}
+
+.mat-drawer-inner-container {
+  background-color: var(--body-bg-color);
+}
+
+/* TYPOGRAPHY */
+/* ========== */
+
+/* h1 */
+.article-title {
+  font-family: "Cormorant Upright", serif;
+}
+
+/* h2 */
+.subtitle {
+  margin-top: 60px;
+}
+
+.txt {
+  font-size: 1.3rem;
+  margin-bottom: 1.7rem;
+  line-height: 1.4;
+}
+
+.txt-italic {
+  font-style: italic;
+}
+
+.txt-bold {
+  font-weight: 800;
+}
+
+.link {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--txt-color);
+  color: var(--txt-color);
+  transition: color 300ms ease, border-width 300ms ease, border-style 300ms ease;
+}
+
+.link:hover {
+  color: var(--link-color);
+  border-bottom: 1px solid var(--link-color);
+  transition: color 300ms ease, border-width 300ms ease, border-style 300ms ease;
+}
+
+.question {
+  font-weight: 800;
+}
+
+/* IMAGES */
+/* ====== */
+
+.img-container {
+  margin: 0;
+}
+
+.img {
+  filter: grayscale(100%) contrast(95%);
+  width: 100%;
+  height: auto;
+}
+
+.img-color {
+  filter: grayscale(0) contrast(100%) saturate(80%);
+  mix-blend-mode: multiply;
+}
+
+.img-caption {
+  font-size: 0.9rem;
+}
+
+/* AUTHOR */
+/* ====== */
+
+.title-footer {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.title-footer__img {
+  max-height: 60px;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  border-radius: 50%;
+}
+
+.author {
+  margin-bottom: 0;
+}
+
+.date {
+  margin-top: 5px;
+}
+
+/* FORMULARIO */
+/* ========== */
+
+.forms-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.form {
+  border: 1px solid var(--color-warm-gray-02);
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+
+.form__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--color-warm-gray-03);
+  padding-bottom: 10px;
+}
+
+.form__phases {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form__input {
+  background-color: var(--color-warm-gray-02);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.form__button {
+  background-color: var(--color-pale-cherry-pink);
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  font-size: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 800;
+  color: var(--color-warm-gray-03);
+
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 500ms ease, color 500ms ease;
+}
+
+.form__button:hover {
+  background-color: var(--color-warm-gray-03);
+  color: var(--color-pale-cherry-pink);
+}

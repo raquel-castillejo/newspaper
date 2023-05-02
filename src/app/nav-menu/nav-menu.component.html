@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar><h2>Menú</h2></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="./camino-economia-circular">Reportajes</a>
+      <a mat-list-item routerLink="./temperatura-abril-espana">Actualidad</a>
+      <a mat-list-item routerLink="./accion-climatica-sin-pedir-perdon"
+        >Cultura</a
+      >
+      <a mat-list-item routerLink="./arlene-birt-ipcc">Especialistas</a>
+      <a mat-list-item routerLink="./jardines-huertos-urbanos">Ideas</a>
+
+      <a mat-list-item routerLink="./login" class="login-link">Login</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="site-title">Hoja Climática</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

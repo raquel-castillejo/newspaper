@@ -1,0 +1,57 @@
+<main class="main">
+  <div class="forms-container">
+    <form class="form">
+      <h2 class="form__title">Regístrate:</h2>
+      <div class="form__phases">
+        <label for="">Usuario:</label
+        ><input
+          [(ngModel)]="newUserName"
+          type="text"
+          name="form__user"
+          id="form__user"
+          class="form__input"
+        />
+      </div>
+      <div class="form__phases">
+        <label for="">Contraseña:</label
+        ><input
+          type="password"
+          [(ngModel)]="newUserPassword"
+          name="form__password"
+          id="form__password"
+          class="form__input"
+        />
+      </div>
+      <button type="submit" (click)="signIn()" class="form__button">
+        Registarse
+      </button>
+    </form>
+
+    <form class="form">
+      <h2 class="form__title">Inicia sesión:</h2>
+      <div class="form__phases">
+        <label for="">Usuario:</label
+        ><input
+          [(ngModel)]="userName"
+          type="text"
+          name="form__user"
+          id="form__user"
+          class="form__input"
+        />
+      </div>
+      <div class="form__phases">
+        <label for="">Contraseña:</label
+        ><input
+          type="password"
+          [(ngModel)]="userPassword"
+          name="form__password"
+          id="form__password"
+          class="form__input"
+        />
+      </div>
+      <button type="submit" (click)="logIn()" class="form__button">
+        Iniciar sesión
+      </button>
+    </form>
+  </div>
+</main>
