@@ -41,7 +41,12 @@ export class LoginComponent {
     // indicamos al usuario si el nombre es correcto o no
     if(isRegistered){
       if(isPasswordCorrect) {
-        alert("Usuario y contraseña correctas.")
+        alert("Usuario y contraseña correctas.");
+        let registeredUsersArticle = document.getElementById("registered-users-article");
+        if (registeredUsersArticle) {
+          registeredUsersArticle.classList.remove("hidden");
+        }
+        
         } else {
           alert("Usuario correcto. Contraseña incorrecta.")
         }
