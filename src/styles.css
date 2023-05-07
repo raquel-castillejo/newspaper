@@ -224,3 +224,7 @@ body {
   background-color: var(--color-warm-gray-03);
   color: var(--color-pale-cherry-pink);
 }
+
+.hidden {
+  display: none !important;
+}
